@@ -40,6 +40,15 @@ window.Seed = (function () {
       submitterAvatarUrl: 'images/avatars/molly.png',
       productImageUrl: 'images/products/image-yellow.png',
     },
+    {
+      id: 5,
+      title: 'Blue Sky',
+      description: 'So super cool.',
+      url: '#',
+      votes: generateVoteCount(),
+      submitterAvatarUrl: 'images/avatars/daniel.jpg',
+      productImageUrl: 'images/products/image-aqua.png',
+    },
   ];
 
   return { products: products };
