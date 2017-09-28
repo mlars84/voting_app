@@ -40,11 +40,16 @@ For more details on this, check out this page on [MDN](https://developer.mozilla
 ```
 class MyReactComponent extends React.Component {
   constructor(props) {
-      super(props); // always call this first
+    super(props); // always call this first
     // custom method bindings here
-this.someFunction = this.someFunction.bind(this);
+    this.someFunction = this.someFunction.bind(this);
   }
 }
 ```
 - When defining custom methods on our React component classes, we must perform the binding pattern inside constructor() so that this references our component.
+- Whereas `props` are immutable and owned by a component’s parent, `state` is owned by the component. `this.state` is private to the component and as we’ll see can be updated with `this.setState()`. When the `state` or `props` of a component update, the component will re-render itself.
+- Every React component is rendered as a function of its `this.props` and `this.state`. This rendering is deterministic. This means that given a set of props and a set of state, a React component will always render a single way. As we mentioned at the beginning of the chapter, this approach makes for a powerful UI consistency guarantee.
+- Never modify `state` outside of `this.setState()`. This function has important hooks around `state` modification that we would be bypassing.
+- While you might be able to “get away” with mutating the `state` in many situations, it’s better practice to treat `state` as immutable.
+- Treat the `state` object as immutable. It’s important to understand which Array and Object methods modify the objects they are called on.
 - 
