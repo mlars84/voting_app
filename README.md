@@ -1,3 +1,9 @@
+# Voting App
+Created following tutorial in Fullstack-React-Book
+
+## Built With
+ReactJS
+
 ### Running the app
 
 1. Ensure you have `npm` installed.
