@@ -52,4 +52,14 @@ class MyReactComponent extends React.Component {
 - Never modify `state` outside of `this.setState()`. This function has important hooks around `state` modification that we would be bypassing.
 - While you might be able to “get away” with mutating the `state` in many situations, it’s better practice to treat `state` as immutable.
 - Treat the `state` object as immutable. It’s important to understand which Array and Object methods modify the objects they are called on.
-- 
+- [Property Initializers](https://github.com/tc39/proposal-class-public-fields) - Using this feature, we can drop constructor(). There is no need for the manual binding call.
+- We can use property initializers to make two refactors to our React components:
+  1. We can use arrow functions for custom component methods (and avoid having to bind this)
+  2. We can define the initial state outside of `constructor()`
+- Chapter One recap:
+  1. We think about and organize our React apps as components
+  2. UsingJSXinsidetherendermethod
+  3. Data flows from parent to children through props
+  4. Event flows from children to parent through functions
+  5. Utilizing React lifecycle methods
+  6. Stateful components and how state is different from props 7. How to manipulate state while treating it as immutable
